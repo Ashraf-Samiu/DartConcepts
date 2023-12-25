@@ -28,30 +28,65 @@ Name: Banana, Color: Yellow, Price: $0.9
 Name: Grapes, Color: Purple, Price: $2.7
 
  */
+class FruitsDiscount{
+  String? fruitsName;
+  String? color;
+  double? price;
+
+  displayFruitDetails(fruitsName,color,price){
+    this.fruitsName=fruitsName;
+    this.color=color;
+    this.price=price;
+    var fruits ={'Name': fruitsName, 'Color':color ,'Price':price};
+    print (fruits );
+
+  }
+  applyPriceDiscount(fruitsName , color,price, discountPercentage){
+    var fruits ={
+      'Name': fruitsName,
+      'Color':color ,
+      'Price':price ,
+      'after Discount price' :discountPercentage
+    };
+    double  afterDiscount=0;
+    discountCalculation(
+        fruits['Name'],
+        fruits['Color'],
+        fruits['Price'],
+        fruits['after Discount price']
+    );
+  }
+
+}
+discountCalculation(name,color ,price,discountPercentage)
+{
+  double? afterDiscount;
+  afterDiscount=price -( price*discountPercentage/100);
+
+  var fruitAfterDiscount ={
+    'Name': name,
+    'Color':color,
+    'Price': afterDiscount
+  };
+    print(fruitAfterDiscount);
+}
+
 
 void main(){
-  List<Map<String,dynamic>> fruits= [
-    {"name":"Apple","color":"Red","price":2.5},
-    {"name":"Banana","color":"Yellow","price":1.0},
-    {"name": "Grapes","color":"Purple","price":3.0}
-  ];
-  print('Original Fruit Details before Discount:');
-  displayFruitDetails(fruits);
-  applyPriceDiscount(fruits, 10);
-  print('\nFruit Details After Applying 10% Discount:');
-  displayFruitDetails(fruits);
-}
 
-void displayFruitDetails(List<Map<String, dynamic>> fruits) {
-  for (var fruit in fruits) {
-    print('Name: ${fruit['name']}, Color: ${fruit['color']}, Price: \$${fruit['price'].toStringAsFixed(2)}');
-  }
-}
-void applyPriceDiscount(List<Map<String, dynamic>> fruits, double discountPercentage) {
-  for (var fruit in fruits) {
-    double originalPrice = fruit['price'];
-    double discountAmount = (discountPercentage / 100) * originalPrice;
-    double discountedPrice = originalPrice - discountAmount;
-    fruit['price'] = discountedPrice;
-  }
+  var fruitObj = FruitsDiscount( );
+  print ( 'Original Fruit Details before Discount:');
+  print ('----------------------------------------------');
+  fruitObj.displayFruitDetails('Apple','Red',2.5);
+  fruitObj.displayFruitDetails('Banana','Yellow',1.0);
+  fruitObj.displayFruitDetails('Grapes','Purple',3.0);
+
+  print ('Fruit Details After Applying 10% Discount:');
+
+  print ('----------------------------------------------');
+
+  fruitObj.applyPriceDiscount('Apple','Red',2.5,10);
+  fruitObj.applyPriceDiscount('Banana','Yellow',1.0,10);
+  fruitObj.applyPriceDiscount('Grapes','Purple',3.0,10);
+
 }
