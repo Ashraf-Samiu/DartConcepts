@@ -1,3 +1,4 @@
+//Party Dress Code
 /* Problem Statement
 In this problem you take two inputs:
 a string S which denotes the dress code (casual or festive) and an integer

@@ -1,5 +1,5 @@
-// Problem Statement
 // Shopping cart
+// Problem Statement
 // Create a program that takes input for a product Id and the quantity purchased.
 // Then, calculate and display the total cost of the items. Use the following list:
 // Product Id: 101 | Price: 10

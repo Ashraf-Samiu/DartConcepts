@@ -1,3 +1,4 @@
+//Simple Arithmetic
 /* Problem Statement
 You are given a string S of length 5,
 representing a simple arithmetic equation.
@@ -22,7 +23,6 @@ Output:
 8
 */
 import 'dart:io';
-import 'dart:math';
 
 void main(){
   String? input= stdin.readLineSync();

@@ -1,5 +1,5 @@
-// Problem Statement
 // Fruit detective
+// Problem Statement
 // Create a program that takes input for a fruit Id
 // I. Display the name of the fruit using the following list:
 // Fruit Id: 31231 | Name: Banana

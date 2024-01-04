@@ -1,6 +1,4 @@
-import 'dart:io';
-
-void main() {
+//Image Container
 //Problem Statement
 // You are working on a mobile screen that includes an image. The image needs to be positioned within
 // a container in a way that ensures the containment of various image sizes. You will be given the image's width
@@ -17,6 +15,10 @@ void main() {
 // IW representing the width of the image.
 // Output
 // An integer representing the left margin for the image within the container.
+
+import 'dart:io';
+
+void main() {
   String? input= stdin.readLineSync();
   int iw= int.parse(input!);
   int container= 1000;
