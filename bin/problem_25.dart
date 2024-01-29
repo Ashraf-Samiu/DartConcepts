@@ -31,9 +31,9 @@ void main(){
   String a= separate[0];
   String b= separate[1];
   String c= separate[2];
-  String newA= b;
-  String newB= c;
-  String newC= a;
+  String newA= c;
+  String newB= a;
+  String newC= b;
   for(int i=0;i<s.length;i++){
     if(s[i]=="A"){
       stdout.write(newA);
